@@ -1,4 +1,4 @@
-# [ITSA Online programming competition](https://e-tutor.itsa.org.tw/e-Tutor/Question_bank.php?id=36)
+# [ITSA Online programming](https://e-tutor.itsa.org.tw/e-Tutor/Question_bank.php?id=36)
 This project contains my solutions for ITSA with c.
 
 - Array
