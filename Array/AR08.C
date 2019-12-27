@@ -1,38 +1,28 @@
 #include<stdio.h>
 #include<stdlib.h>
+int max(int a, int b)
+{
+		return a>b?a:b;
+}
 int main()
 {
-		int i=0, j=0, k=0, l=0;
-		int total=0, sum=0, count=0, max;
-		int number[100], result[100];
+		int i=0;
+		int n=0;
+		int number[128];
+		int dp[128];
+		int result=0;
 
-		while(scanf("%d", &number[i])!=EOF){
-				i++;
+		while(scanf("%d", &number[n])!=EOF){
+			++n;
 		}
 
-		for(j=0; j<i-2; j++){
-				count=j;
-				total=i-j;
-				while(total!=1){
-						for(k=j; k<total; k++){
-								sum+=number[k];
-						}
-						result[count]=sum;
-						sum=0;
-						count++;
-						total--;
-				}
-				max=result[0];
-				for(l=1; l<count; l++){
-						if(max<result[l])
-								max=result[l];
-				}
-				result[0]=max;
-		}
-		if(max>0)
-				printf("%d\n", result[0]);
-		else
-				printf("0\n");
+		for(i=0; i<n; i++) dp[i]=0;
+		dp[0]=max(number[0], 0);
+
+		for(i=1; i<n; i++) dp[i]=max(max(dp[i-1]+number[i], number[i]), 0);
+		
+		result=0;
+		for(i=0; i<n; i++) result=max(result, dp[i]);
+		printf("%d\n", result);
 		return 0;
 }
-
