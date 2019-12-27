@@ -1,52 +1,29 @@
-#include<stdio.h>
-#include<stdlib.h>
-#define OUT 0
-#define IN  1
-struct node{
-		int girl;
-		int boy;
-		int value;
-};
-int cmp(const void *x, const void *y)
-{
-		return ((struct node *)x)->value-((struct node *)y)->value;
-}
-int main()
-{
-		struct node *lnode;
-		int number, flag, count, temp, *boy, *girl, i, j;
-		while(scanf("%d", &number)!=EOF){
-				lnode=(struct node *)malloc(2*number*sizeof(struct node));
-				count=0;
-				for(i=1; i<=number; i++){
-						for(j=1; j<=number; j++){
-								scanf("%d", &lnode[count].value);
-								lnode[count].boy=i;
-								lnode[count].girl=j;
-								count++;
-						}
-				}
-				qsort(lnode, count, sizeof(struct node), cmp);
-				boy=(int *)malloc(number*sizeof(int));
-				girl=(int *)malloc(number*sizeof(int));
-				for(i=0; i<number; i++){
-						boy[i]=OUT;
-						girl[i]=OUT;
-				}
-				flag=0;
-				for(i=0; i<count; i++){
-						if(boy[lnode[i].boy]!=IN && girl[lnode[i].girl]!=IN){
-								printf("boy %d pair with girl %d\n", lnode[i].boy, lnode[i].girl);
-								boy[lnode[i].boy]=IN;
-								girl[lnode[i].girl]=IN;
-								flag++;
-						}
-						if(flag==number)
-								break;
-				}
-				free(lnode);
-				free(boy);
-				free(girl);
-		}
-		return 0;
-}
+#include<stdio.h>  
+#include<stdlib.h>  
+int main()  
+{  
+    int a, i, j, k, state1[100], state2[100], match[100][100], max, boy=0, girl=0;  
+    while(scanf("%d", &a)!=EOF){  
+        for(i=0; i<a; i++){  
+            for(j=0; j<a; j++){  
+                scanf("%d", &match[i][j]);  
+            }  
+        }  
+        for(i=0; i<a; i++){  
+            state1[i]=state2[i]=0;  
+        }  
+        for(i=0; i<a; i++){  
+            max=-1;  
+            for(j=0; j<a; j++){  
+                for(k=0; k<a; k++){  
+                    if(max<match[j][k] && (!state1[j] && !state2[k])){  
+                        max=match[j][k]; boy=j; girl=k;  
+                    }  
+                }  
+            }  
+            printf("boy %d pair with girl %d\n", boy+1, girl+1);  
+            state1[boy]=state2[girl]=1;  
+        }  
+    }  
+    return 0;  
+}  
