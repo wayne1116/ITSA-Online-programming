@@ -3,25 +3,25 @@
 void pro(int a)
 {
 		if(a==0)
-				printf("¹s");
+				printf("é›¶");
 		else if(a==1)
-				printf("³ü");
+				printf("Â³Ã¼");
 		else if(a==2)
-				printf("¶L");
+				printf("Â¶L");
 		else if(a==3)
-				printf("°Ñ");
+				printf("Â°Ã‘");
 		else if(a==4)
-				printf("¸v");
+				printf("Â¸v");
 		else if(a==5)
-				printf("¥î");
+				printf("Â¥Ã®");
 		else if(a==6)
-				printf("³°");
+				printf("Â³Â°");
 		else if(a==7)
-				printf("¬m");
+				printf("Â¬m");
 		else if(a==8)
-				printf("®Ã");
+				printf("Â®Ãƒ");
 		else
-				printf("¨h");
+				printf("Â¨h");
 }
 int main()
 {
@@ -30,11 +30,11 @@ int main()
 				for(i=0; i<a; i++){
 						scanf("%d", &number);
 						if(number==0){
-								printf("¹s\n"); continue;
+								printf("Â¹s\n"); continue;
 						}
 						if(number>=100000000){
 								pro(number/100000000);
-								printf("»õ");
+								printf("Â»Ãµ");
 						}
 						if(number>=10000){
 								temp=(number/10000)%10000; result1=result2=result3=result4=-1;
@@ -52,21 +52,21 @@ int main()
 								}
 								if(result1 || result2 || result3 || result4){
 										if(result1>0){
-												pro(result1); printf("¥a");
+												pro(result1); printf("Â¥a");
 										}
 										if(result2>0){
 												if(result1==0) pro(0);
-												pro(result2); printf("¨Õ");
+												pro(result2); printf("Â¨Ã•");
 										}
 										if(result3>0){
 												if(result2==0) pro(0);
-												pro(result3); printf("¬B");
+												pro(result3); printf("Â¬B");
 										}
 										if(result4>0){
 												if(result3==0) pro(0);
 												pro(result4);
 										}
-										printf("¸U");
+										printf("Â¸U");
 								}
 						}
 						if(number>=0){
@@ -85,15 +85,15 @@ int main()
 								}
 								if(result1||result2||result3||result4){
 										if(result1>0){
-												pro(result1); printf("¥a");
+												pro(result1); printf("Â¥a");
 										}
 										if(result2>0){
 												if(result1==0) pro(0);
-												pro(result2); printf("¨Õ");
+												pro(result2); printf("Â¨Ã•");
 										}
 										if(result3>0){
 												if(result2==0) pro(0);
-												pro(result3); printf("¬B");
+												pro(result3); printf("Â¬B");
 										}
 										if(result4>0){
 												if(result3==0) pro(0);
