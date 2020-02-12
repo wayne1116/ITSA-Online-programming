@@ -1,4 +1,4 @@
-### [String] (https://e-tutor.itsa.org.tw/e-Tutor/course/view.php?id=23)
+### [String](https://e-tutor.itsa.org.tw/e-Tutor/course/view.php?id=23)
 
 - ST02 String encoding
 
