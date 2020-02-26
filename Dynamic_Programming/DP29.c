@@ -7,6 +7,7 @@ int main()
 	int num1=0, num2=0, left=0, right=0, middle=0;
 	int i=0, flag=0, a=0;
 	int start=0, end=0;
+	
 	for(i=0; i<100000; i++){
 		temp=i;
 		num1=temp%10;
