@@ -3,11 +3,13 @@
 int main()    
 {    
     char gray[1024];    
-    int a, result, i, j, state, flag, b;    
+    int a, result, i, j, state, flag, b;
+    
     while(scanf("%d%d", &a, &b)!=EOF){    
         for(i=0; i<a; i++){    
             gray[i]='0';    
         }    
+        
         gray[i]='\0';  
         state=0;    
         for(i=1; i<=b; i++){    
@@ -20,8 +22,7 @@ int main()
                     gray[a-1]='0';    
                     state=0;    
                 }    
-            }    
-            else{    
+            } else{    
                 for(j=a-1; j>=0; j--){    
                     if(gray[j]=='1'){    
                         break;    
@@ -35,6 +36,7 @@ int main()
                 }    
             }      
         }    
+        
         printf("%s\n", gray);  
         scanf("%d", &flag);  
         if(flag==-1)  
