@@ -17,6 +17,7 @@ int main()
     int i=0, j=0;  
     int count=0;  
     int time=0;  
+    
     while(scanf("%d", &a)!=EOF){  
         for(i=0; i<a; i++){  
             scanf("%d", &b);  
