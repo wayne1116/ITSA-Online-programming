@@ -20,21 +20,20 @@ int main()
                         q=s.begin();  
                         p=s.end();  
                         while(p!=q){
-							s1.insert(*q+number[i]);    
-                            q++;  
+				s1.insert(*q+number[i]);    
+                            	q++;  
                         }  
                         q=s1.begin();
                         p=s1.end();
                         while(p!=q){
                         	if(s.count(*q)==0)
                         		s.insert(*q);
-                        		q++;
-						}
-						s1.clear();
+                        	q++;
+			}
+			s1.clear();
                 }  
                 cout << s.size() << endl;  
                 s.clear();  
         }  
         return 0;  
 }  
-
