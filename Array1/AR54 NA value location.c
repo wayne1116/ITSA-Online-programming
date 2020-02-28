@@ -6,6 +6,7 @@ int main()
 {
 	char line[MAX], *ptr;
 	int i, count=0, flag=0, local[MAX];
+	
 	while(fgets(line, MAX, stdin)!=NULL){
 		ptr=line;
 		if(!isdigit(*ptr)){
