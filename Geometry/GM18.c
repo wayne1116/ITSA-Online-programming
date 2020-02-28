@@ -9,6 +9,7 @@ int main()
     int result=0;    
     int index1=0, index2=0;    
     int a=0, b=0;     
+    
     while(scanf("%d%d", &a,&b)!=EOF){    
         for(i=0; i<a; i++){    
             for(j=0; j<b; j++){    
