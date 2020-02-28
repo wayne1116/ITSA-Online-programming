@@ -3,6 +3,7 @@ using namespace std;
 int main()
 {
 	int n=0, x1=0, x2=0, y1=0, y2=0;
+	
 	while(cin>>n && n){
 		for(int i=0; i<n; i++){
 			cin >> x1 >> y1 >> x2 >> y2;
